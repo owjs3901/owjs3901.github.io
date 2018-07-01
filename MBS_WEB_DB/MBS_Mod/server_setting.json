@@ -1,0 +1,13 @@
+{
+    "download":{
+        "font":[],
+        "img":[],
+        "music":[]
+    },
+    "broadcast":{
+        "message":[],
+        "time":5
+    },
+    "custom_dimension":[],
+    "character_slot":true
+}
