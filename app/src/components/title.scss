@@ -1,0 +1,12 @@
+@import "../style";
+.title {
+  //width: 100%;
+  text-align: center;
+}
+.title__in {
+  font-size: 4rem;
+  display: inline;
+  border-bottom: solid $primary-dark 0.15em;
+  font-weight: bold;
+  color: $primary-dark;
+}

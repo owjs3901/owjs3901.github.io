@@ -1,0 +1,25 @@
+@import "../../style";
+
+.home {
+  background-color: $primary;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 5vw;
+  @media screen and (min-width: $full-width) {
+    font-size: 6em;
+  }
+  & >:nth-child(1) {
+    letter-spacing: 0.38em;
+  }
+  & >:nth-child(2) {
+    letter-spacing: 0.25em;
+  }
+  & >:nth-child(3) {
+    letter-spacing: 0.14em;
+  }
+}
