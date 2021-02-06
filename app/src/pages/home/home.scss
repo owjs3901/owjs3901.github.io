@@ -11,15 +11,18 @@
   color: white;
   font-size: 5vw;
   @media screen and (min-width: $full-width) {
-    font-size: 6em;
+	font-size: 6em;
   }
-  & >:nth-child(1) {
-    letter-spacing: 0.38em;
+
+  & > :nth-child(1) {
+	letter-spacing: 0.38em;
   }
-  & >:nth-child(2) {
-    letter-spacing: 0.25em;
+
+  & > :nth-child(2) {
+	letter-spacing: 0.25em;
   }
-  & >:nth-child(3) {
-    letter-spacing: 0.14em;
+
+  & > :nth-child(3) {
+	letter-spacing: 0.14em;
   }
 }

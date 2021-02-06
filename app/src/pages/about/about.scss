@@ -9,12 +9,15 @@ article {
 }
 
 .about-container {
-  justify-content: center;
   display: flex;
   padding: 2em;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: center;
 
   @media screen and (max-width: $mobile-width){
+    img {
+      width: 80%;
+    }
     flex-direction: column;
     align-items: center;
   }
@@ -27,11 +30,14 @@ article {
 .main-about {
   //margin: 3em;
   text-align: right;
-  font-size: 3rem;
+  font-size: 3vw;
   width: 100%;
   @media screen and (max-width: $mobile-width){
     text-align: center;
     font-size: 1.5rem;
+  }
+  @media screen and (min-width: $full-width){
+    font-size: 3rem;
   }
 
   & > :nth-child(2) {
@@ -41,7 +47,7 @@ article {
 
 .sub-about {
   margin-top: 5em;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   border-left: solid $primary-dark 0.5em;
 
   > div {
@@ -51,6 +57,9 @@ article {
       text-align: center;
       margin: 0.5em;
     }
+  }
+  @media screen and (min-width: $full-width){
+    font-size: 1.5rem;
   }
   @media screen and (max-width: $mobile-width){
     font-size: 1rem;

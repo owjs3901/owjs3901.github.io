@@ -20,7 +20,7 @@ ul {
 li {
   color: white;
   margin-right: 1em;
-  display: inline;
+  display: inline-block;
   @media screen and (max-width: $mobile-width){
     padding: 0.2em 0;
     width: 100%;
@@ -31,6 +31,17 @@ li {
   transition: color 0.2s, border-bottom-color 0.2s;
   &:hover {
     color: $point;
-    border-bottom: solid $point 3px;
+    &:after {
+      transform: scaleX(1);
+      background-color: $point;
+    }
+  }
+  &:after {
+    display: block;
+    content: '';
+    height: 0.2em;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.2s;
   }
 }
