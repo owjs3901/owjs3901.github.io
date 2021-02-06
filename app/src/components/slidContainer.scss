@@ -1,0 +1,111 @@
+@import "../style";
+
+.slid-container {
+  padding: 8em;
+  //width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .arrow-left {
+	margin-left: 1em;
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	border-top: 10vw solid transparent;
+	border-bottom: 10vw solid transparent;
+	border-right: 10vw solid black;
+	display: none;
+	@media screen and (max-width: $mobile-width){
+	  display: block;
+	}
+  }
+
+  .arrow-right {
+	margin-right: 1em;
+	position: absolute;
+	width: 0;
+	right: 0;
+	height: 0;
+	border-top: 10vw solid transparent;
+	border-bottom: 10vw solid transparent;
+	border-left: 10vw solid black;
+	display: none;
+
+	@media screen and (max-width: $mobile-width){
+	  display: block;
+	}
+  }
+}
+
+.slid-button {
+  position: absolute;
+  left: calc(50% - 100px);
+  transition: 1s;
+  //display: none;
+  opacity: 0;
+  transform: scale(0);
+
+  .slid-button__bottom {
+	width: 0;
+	height: 10px;
+	border-top: 50px solid black;
+	border-right: 100px solid transparent;
+	border-left: 100px solid transparent;
+	transition: 1s;
+  }
+  .slid-button__bottom__cover {
+	position: absolute;
+	top: calc(100% - 70px);
+	width: 0;
+	height: 10px;
+	border-top: 50px solid black;
+	border-right: 100px solid transparent;
+	border-left: 100px solid transparent;
+  }
+
+  &.selected {
+	display: block;
+	opacity: 1;
+	transform: scale(1);
+	z-index: 10;
+
+	.slid-button__bottom {
+	  transition: 1s;
+	  border-top-color: $point;
+	}
+  }
+
+  &.near-left {
+	left: calc(25% - 100px);
+	display: block;
+	opacity: 1;
+	transform: scale(0.7);
+	@media screen and (max-width: $mobile-width){
+	  transform: scale(0);
+	}
+  }
+
+  &.near-right {
+	left: calc(75% - 100px);
+	display: block;
+	opacity: 1;
+	transform: scale(0.7);
+	@media screen and (max-width: $mobile-width){
+	  transform: scale(0);
+	}
+  }
+
+  .slid-button__main {
+	background-color: black;
+	color: white;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	font-size: 2rem;
+	font-weight: bold;
+  }
+}

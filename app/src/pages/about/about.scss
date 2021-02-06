@@ -1,11 +1,21 @@
 @import "../../style";
 
-section {
+section.about {
   padding: 5em 0;
+  article {
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-article {
-
+.img-block-container {
+  text-align: center;
+  margin-top: 25em;
+  align-self: flex-end;
+  @media screen and (max-width: $mobile-width){
+    margin-top: 0;
+  }
 }
 
 .about-container {
@@ -17,14 +27,11 @@ article {
   @media screen and (max-width: $mobile-width){
     img {
       width: 80%;
+      margin-bottom: 4em;
     }
     flex-direction: column;
     align-items: center;
   }
-}
-
-article {
-  padding: 8em 2em;
 }
 
 .main-about {

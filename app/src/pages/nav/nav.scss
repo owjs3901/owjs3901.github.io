@@ -23,8 +23,9 @@ li {
   display: inline-block;
   @media screen and (max-width: $mobile-width){
     padding: 0.2em 0;
-    width: 100%;
+    //width: 100%;
     text-align: center;
+    margin: auto;
     display: block;
   }
   width: min-content;
