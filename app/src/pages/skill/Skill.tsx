@@ -2,23 +2,16 @@ import './skill.scss';
 import Title from '../../components/Title';
 import SlidContainer from '../../components/SlidContainer';
 import SkillState from '../../components/SkillState';
+import { skillMap } from './Constant';
+import { useState } from 'react';
 
 function Skill() {
+    const [value, setValue] = useState(Object.keys(skillMap)[0]);
     return (
-        <section className={'skill'}>
+        <section id={'skill'}>
             <Title title={'SKILL'} />
-            <SlidContainer
-                onChange={(idx) => {}}
-                data={[
-                    'Language',
-                    'Server',
-                    'Web Front',
-                    'Embedded',
-                    'Mobile',
-                    'Etc',
-                ]}
-            />
-            <SkillState />
+            <SlidContainer onChange={setValue} data={Object.keys(skillMap)} />
+            <SkillState skill={value} />
         </section>
     );
 }

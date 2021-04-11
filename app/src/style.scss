@@ -6,6 +6,10 @@ $point: #F59B00;
 $full-width: 1920px;
 $mobile-width: 920px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: 'KoPub Dotum', fantasy;
 }

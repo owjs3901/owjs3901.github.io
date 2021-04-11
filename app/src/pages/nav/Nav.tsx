@@ -4,11 +4,21 @@ function Nav() {
     return (
         <nav>
             <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>SKILL</li>
-                <li>PROJECT</li>
-                <li>CONTACT</li>
+                <a href={'#home'}>
+                    <li>HOME</li>
+                </a>
+                <a href={'#about'}>
+                    <li>ABOUT</li>
+                </a>
+                <a href={'#skill'}>
+                    <li>SKILL</li>
+                </a>
+                <a href={'#history'}>
+                    <li>PROJECT</li>
+                </a>
+                <a href={'#contact'}>
+                    <li>CONTACT</li>
+                </a>
             </ul>
         </nav>
     );

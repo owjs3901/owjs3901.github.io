@@ -1,5 +1,5 @@
 import './slidContainer.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface SlidButtonProps {
     name: string;
@@ -32,11 +32,16 @@ function SlidButton({ name, onClick, idx, nowIndex, size }: SlidButtonProps) {
 
 interface SlidContainerProps {
     data: string[];
-    onChange: (idx: number) => void;
+    onChange: (idx: string) => void;
 }
 
 function SlidContainer({ data, onChange }: SlidContainerProps) {
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        onChange(data[index]);
+    }, [index]);
+
     return (
         <div className={'slid-container'}>
             {data.map((value, idx) => (
@@ -46,7 +51,6 @@ function SlidContainer({ data, onChange }: SlidContainerProps) {
                     idx={idx}
                     nowIndex={index}
                     onClick={() => {
-                        onChange(idx);
                         setIndex(idx);
                     }}
                     name={value}

@@ -1,1 +1,63 @@
 @import "../style";
+
+.skill-state {
+  box-sizing: border-box;
+  padding: 2em;
+  max-width: $mobile-width;
+  background-color: #282c34;
+  margin: auto;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  @media screen and (max-width: $mobile-width) {
+	padding: 2em 0;
+	width: 100%;
+  }
+
+  .skill-view {
+	position: absolute;
+	font-weight: bold;
+	right: 1em;
+  }
+
+  .skill-graph {
+	position: relative;
+	display: flex;
+	background-color: white;
+	align-items: center;
+	visibility: hidden;
+	transform-origin: left;
+	overflow: hidden;
+	transform: scaleX(0);
+	height: 0;
+	margin: 0;
+	transition: transform 0.5s,
+	visibility 0.5s, margin 0.5s step-end, height 0.5s step-end;
+
+	&.show {
+	  margin: 0.5em 0;
+	  height: 3rem;
+	  transform: scaleX(1);
+	  visibility: visible;
+	  transition: transform 0.5s,
+	  visibility 0.5s, margin 0.5s step-start, height 0.5s step-start;
+	  transition-delay: 1s;
+	}
+
+	.skill-name {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  height: 3em;
+	  background-color: black;
+	  color: white;
+	  flex: 0.2;
+	  text-align: center;
+	}
+
+	.skill-percent {
+	  height: 3em;
+	  flex: 0.8;
+	  background-color: $point;
+	}
+  }
+}
