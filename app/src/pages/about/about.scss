@@ -1,5 +1,10 @@
 @import "../../style";
 
+#about {
+  max-width: 1200px;
+  margin: auto;
+}
+
 section.about {
   padding: 5em 0;
   article {
@@ -14,8 +19,9 @@ section.about {
 
 .img-block-container {
   text-align: center;
-  margin-top: 25em;
   align-self: flex-end;
+  justify-content: space-between;
+  gap: 10px;
   @media screen and (max-width: $mobile-width){
     margin-top: 0;
   }
@@ -27,8 +33,13 @@ section.about {
   align-items: flex-start;
   justify-content: center;
 
+  > img {
+    width: 40%;
+  }
+
+
   @media screen and (max-width: $mobile-width){
-    img {
+    > img {
       width: 80%;
       margin-bottom: 4em;
     }

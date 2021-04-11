@@ -5,7 +5,7 @@ import ImgBlock, { ImgBlockType } from '../../components/ImgBlock';
 
 function About() {
     return (
-        <section className={'about'}>
+        <section className={'about'} id={'about'}>
             <Title title={'ABOUT'} />
             <div className={'about-container'}>
                 <img src={m} data-aos="zoom-in" alt={'my profile'} />

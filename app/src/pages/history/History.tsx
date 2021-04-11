@@ -8,10 +8,15 @@ function History() {
     // eslint-disable-next-line no-unused-vars
     const [_, setValue] = useState(Object.keys(historyMap)[0]);
     return (
-        <section id={'history'}>
-            <Title title={'HISTORY'} />
-            <SlidContainer onChange={setValue} data={Object.keys(historyMap)} />
-        </section>
+        <div id={'history-wr'}>
+            <section id={'history'}>
+                <Title title={'HISTORY'} />
+                <SlidContainer
+                    onChange={setValue}
+                    data={Object.keys(historyMap)}
+                />
+            </section>
+        </div>
     );
 }
 

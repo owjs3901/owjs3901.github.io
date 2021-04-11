@@ -8,11 +8,16 @@ import { useState } from 'react';
 function Skill() {
     const [value, setValue] = useState(Object.keys(skillMap)[0]);
     return (
-        <section id={'skill'}>
-            <Title title={'SKILL'} />
-            <SlidContainer onChange={setValue} data={Object.keys(skillMap)} />
-            <SkillState skill={value} />
-        </section>
+        <div id={'skill-wr'}>
+            <section id={'skill'}>
+                <Title title={'SKILL'} />
+                <SlidContainer
+                    onChange={setValue}
+                    data={Object.keys(skillMap)}
+                />
+                <SkillState skill={value} />
+            </section>
+        </div>
     );
 }
 
