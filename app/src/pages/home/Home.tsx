@@ -3,7 +3,7 @@ import Typing from 'react-typing-animation';
 
 function Home() {
     return (
-        <div className={'home'}>
+        <div id="home">
             <Typing data-aos="zoom-in" speed={10} hideCursor={true}>
                 <div>
                     풀 스택 이상의 <Typing.Delay ms={200} />
