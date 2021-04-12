@@ -14,7 +14,7 @@ function Nav() {
                     <li>SKILL</li>
                 </a>
                 <a href={'#history'}>
-                    <li>PROJECT</li>
+                    <li>HISTORY</li>
                 </a>
                 <a href={'#contact'}>
                     <li>CONTACT</li>
