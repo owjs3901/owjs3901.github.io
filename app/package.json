@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
